@@ -1,12 +1,15 @@
 import React from 'react';
 import { css } from 'glamor';
+import Title from './Title';
+
+const centered = css({
+  width: '800px',
+  margin: '0 auto',
+});
 
 const App = () => (
-  <div>
-    <h1 className={css({ color: 'red' })}>App</h1>
-    <p>Continous integration is very fun!!!</p>
-    <p>This was built using CircleCI!!</p>
-    <h1>I AM SO HAPPY</h1>
+  <div className={centered}>
+    <Title title="CONTINOUS INTEGRATION" />
   </div>
 );
 
