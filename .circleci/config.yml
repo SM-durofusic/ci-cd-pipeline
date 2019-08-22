@@ -14,7 +14,7 @@ jobs:
       - run: npm run build
       - aws-s3/sync:
           from: build
-          to: "s3://ci-cd-pipeline11/"
+          to: 's3://ci-cd-pipeline11/'
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400" \
