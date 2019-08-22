@@ -2,6 +2,13 @@ version: 2.1
 orbs:
   aws-s3: circleci/aws-s3@1.0.4
 jobs:
+  test:
+    docker:
+      - image: circleci/python:2.7-node
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run test
   build:
     docker:
       - image: circleci/python:2.7-node
@@ -19,13 +26,6 @@ jobs:
             --acl public-read \
             --cache-control "max-age=86400" \
           overwrite: true
-  test:
-    docker:
-      - image: circleci/python:2.7-node
-    steps:
-      - checkout
-      - run: npm install
-      - run: npm run test
 workflows:
   version: 2.1
   build:
