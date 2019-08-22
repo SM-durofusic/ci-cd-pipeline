@@ -15,7 +15,8 @@
     "eject": "react-scripts eject",
     "prettier:fix": "prettier --single-quote --trailing-comma es5 --write \"./src/**/*.js\"",
     "eslint:fix": "eslint \"src/**/*.js\"",
-    "precommit": "yarn prettier:fix && yarn eslint:fix"
+    "precommit": "yarn prettier:fix && yarn eslint:fix",
+    "prebuild": "yarn prettier:fix && echo BUILD DONE"
   },
   "eslintConfig": {
     "extends": "react-app"
